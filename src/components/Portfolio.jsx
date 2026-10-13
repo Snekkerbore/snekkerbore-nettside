@@ -18,6 +18,8 @@ const PROJECTS = [
     tag: 'Terrasse',
     title: 'Terrasse i Møre Royal',
     description: 'Skjult skrueinnfesting og innebygd belysning langs hele kanten.',
+    image: '/bilder/terrasse-more-royal.webp',
+    imagePosition: '50% 15%',
     variant: 'safety',
   },
 ]
@@ -48,6 +50,7 @@ export default function Portfolio() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  style={{ objectPosition: project.imagePosition }}
                   className="aspect-[4/5] w-full object-cover"
                 />
               ) : (
