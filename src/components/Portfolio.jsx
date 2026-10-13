@@ -15,7 +15,7 @@ const PROJECTS = [
   },
   {
     tag: 'Terrasse',
-    title: 'Terrasse i kebony',
+    title: 'Terrasse i Møre Royal',
     description: 'Skjult skrueinnfesting og innebygd belysning langs hele kanten.',
     variant: 'safety',
   },
