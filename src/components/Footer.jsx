@@ -1,8 +1,9 @@
 import Logo from './Logo'
+import { youtubeChannelUrl } from '../data/youtube'
 
 const SOCIAL_LINKS = [
   { label: 'Instagram', href: 'https://instagram.com/snekkerbore' },
-  { label: 'YouTube', href: 'https://youtube.com/@snekkerbore' },
+  { label: 'YouTube', href: youtubeChannelUrl },
 ]
 
 export default function Footer() {

@@ -1,6 +1,6 @@
-import ImageBlock from './ImageBlock'
 import ReelTile from './ReelTile'
 import { socialReels } from '../data/socialReels'
+import { youtubeChannelUrl, youtubeVideos } from '../data/youtube'
 
 const INSTAGRAM_VARIANTS = ['steel', 'flat', 'safety', 'flat', 'steel', 'safety']
 
@@ -12,12 +12,6 @@ const INSTAGRAM_PHOTOS = [
   { src: '/bilder/snomaking-solnedgang.webp', alt: 'Snømåking på byggeplass i solnedgang' },
   { src: '/bilder/spikerpistol.webp', alt: 'Spikerpistol i bruk' },
   { src: '/bilder/dykksag.webp', alt: 'Dykksag på arbeidsbukk' },
-]
-
-const YOUTUBE_VIDEOS = [
-  { title: 'Fra riving til ferdig bad', variant: 'steel' },
-  { title: 'Slik priser vi et tilbygg', variant: 'safety' },
-  { title: 'En dag på byggeplassen', variant: 'flat' },
 ]
 
 function PlayIcon() {
@@ -81,34 +75,53 @@ export default function Social() {
           </div>
         </div>
 
-        <div className="mt-16">
-          <div className="mb-5 flex items-center justify-between">
-            <h3 className="text-lg font-bold text-chalk-50">YouTube</h3>
-            <a
-              href="https://youtube.com/@snekkerbore"
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm font-bold text-chalk-50 hover:text-chalk-300"
-            >
-              Abonner på kanalen
-            </a>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {YOUTUBE_VIDEOS.map((video) => (
-              <div key={video.title}>
-                <div className="relative">
-                  <ImageBlock variant={video.variant} className="aspect-video w-full text-safety-500" />
-                  <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70">
-                      <PlayIcon />
+        {youtubeVideos.length > 0 && (
+          <div className="mt-16">
+            <div className="mb-5 flex items-center justify-between">
+              <h3 className="text-lg font-bold text-chalk-50">YouTube</h3>
+              <a
+                href={youtubeChannelUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-bold text-chalk-50 hover:text-chalk-300"
+              >
+                Abonner på kanalen
+              </a>
+            </div>
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+              {youtubeVideos.map((video) => (
+                <a
+                  key={video.id}
+                  href={
+                    video.short
+                      ? `https://www.youtube.com/shorts/${video.id}`
+                      : `https://www.youtube.com/watch?v=${video.id}`
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`group block ${video.short ? '' : 'col-span-3'}`}
+                >
+                  <div className="relative overflow-hidden bg-coal-700">
+                    <img
+                      src={`https://i.ytimg.com/vi/${video.id}/${video.short ? 'oardefault' : 'hqdefault'}.jpg`}
+                      alt=""
+                      loading="lazy"
+                      className={`w-full object-cover transition-transform duration-300 group-hover:scale-105 ${
+                        video.short ? 'aspect-[9/16]' : 'aspect-video'
+                      }`}
+                    />
+                    <span className="absolute inset-0 flex items-center justify-center">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 transition-colors group-hover:bg-red-600">
+                        <PlayIcon />
+                      </span>
                     </span>
-                  </span>
-                </div>
-                <p className="mt-3 text-sm font-semibold text-chalk-50">{video.title}</p>
-              </div>
-            ))}
+                  </div>
+                  <p className="mt-3 text-sm font-semibold text-chalk-50">{video.title}</p>
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   )

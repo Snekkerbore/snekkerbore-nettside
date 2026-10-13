@@ -21,6 +21,7 @@ Instagram-lenker, betrodde merkevarer/leverandører) ligger i egne filer under
 
 - `src/data/trustedBrands.js` – samarbeidspartnere (logoer i `public/logos/`, vises i hvitt som standard)
 - `src/data/presse.js` – presseomtale
+- `src/data/youtube.js` – videoer fra egen YouTube-kanal (legg nye øverst)
 - `src/data/podcasts.js` – podcast-/videoopptredener
 - `src/data/socialReels.js` – Instagram Reels
 
