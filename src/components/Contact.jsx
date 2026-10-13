@@ -28,11 +28,12 @@ export default function Contact() {
     setStatus('sending')
 
     try {
-      await fetch('/', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'kontakt', ...form }),
       })
+      if (!response.ok) throw new Error(`Skjemaet ble ikke sendt (${response.status})`)
       setStatus('success')
       setForm(initialForm)
     } catch {
