@@ -4,6 +4,16 @@ import { socialReels } from '../data/socialReels'
 
 const INSTAGRAM_VARIANTS = ['steel', 'flat', 'safety', 'flat', 'steel', 'safety']
 
+// Vises frem til ekte Reels er lagt inn i src/data/socialReels.js.
+const INSTAGRAM_PHOTOS = [
+  { src: '/bilder/vindu-ramme.webp', alt: 'Vindusmontering sett innenfra' },
+  { src: '/bilder/vinter-kappsag.webp', alt: 'Kapping på byggeplass om vinteren' },
+  { src: '/bilder/kveldsarbeid.webp', alt: 'Kveldsarbeid på terrasse' },
+  { src: '/bilder/snomaking-solnedgang.webp', alt: 'Snømåking på byggeplass i solnedgang' },
+  { src: '/bilder/spikerpistol.webp', alt: 'Spikerpistol i bruk' },
+  { src: '/bilder/dykksag.webp', alt: 'Dykksag på arbeidsbukk' },
+]
+
 const YOUTUBE_VIDEOS = [
   { title: 'Fra riving til ferdig bad', variant: 'steel' },
   { title: 'Slik priser vi et tilbygg', variant: 'safety' },
@@ -52,8 +62,21 @@ export default function Social() {
               ? socialReels.map((reel, i) => (
                   <ReelTile key={reel.url} reel={reel} variant={INSTAGRAM_VARIANTS[i % INSTAGRAM_VARIANTS.length]} />
                 ))
-              : INSTAGRAM_VARIANTS.map((variant, i) => (
-                  <ImageBlock key={i} variant={variant} className="aspect-[9/16] w-full text-safety-500" />
+              : INSTAGRAM_PHOTOS.map((photo) => (
+                  <a
+                    key={photo.src}
+                    href="https://instagram.com/snekkerbore"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group block overflow-hidden"
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      className="aspect-[9/16] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </a>
                 ))}
           </div>
         </div>

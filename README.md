@@ -30,7 +30,7 @@ slett komponentene, bare la datafilen stå tom til dere har innhold.
 ## Innhold som gjenstår
 
 - [x] Riktig logo/favicon (gul sagblad-logo, se `src/assets/` og `public/`)
-- [ ] Ekte bilder i Hero, Om oss, Prosjekter og Omtaler (nå `ImageBlock`-plassholdere)
+- [ ] Ekte bilder i Prosjekter (Hero, Om oss, Omtaler og Instagram-ruter har bilder i `public/bilder/`)
 - [ ] Faktiske tjenester, priser og kontaktinfo (telefon/e-post er plassholdere)
 - [ ] Koble skjemaene til riktig varsling (Netlify Forms er satt opp, men sjekk mottaker-e-post i Netlify-dashboardet)
 - [x] Gulfargen (`--color-safety-500`) er hentet fra logoen (#fcbb32)

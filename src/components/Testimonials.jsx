@@ -1,5 +1,3 @@
-import ImageBlock from './ImageBlock'
-
 const WHY_CUSTOMERS_CHOOSE_US = [
   'Fast, skriftlig pris før oppstart',
   'Holder avtalte tidsfrister',
@@ -42,8 +40,18 @@ export default function Testimonials() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <ImageBlock variant="flat" className="aspect-[3/4] w-full text-chalk-50" />
-            <ImageBlock variant="steel" className="mt-8 aspect-[3/4] w-full text-safety-500" />
+            <img
+              src="/bilder/kledning-smil.webp"
+              alt="Montering av kledning"
+              loading="lazy"
+              className="aspect-[3/4] w-full object-cover object-[50%_40%]"
+            />
+            <img
+              src="/bilder/tak-montering.webp"
+              alt="Arbeid på tak og fasade"
+              loading="lazy"
+              className="mt-8 aspect-[3/4] w-full object-cover object-[50%_35%]"
+            />
           </div>
         </div>
       </div>

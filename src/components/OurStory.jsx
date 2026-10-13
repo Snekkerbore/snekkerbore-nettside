@@ -1,12 +1,12 @@
-import ImageBlock from './ImageBlock'
-
 export default function OurStory() {
   return (
     <section id="om-oss" className="bg-coal-900 py-24 sm:py-32">
       <div className="mx-auto grid max-w-6xl gap-14 px-6 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-        <ImageBlock
-          variant="flat"
-          className="aspect-[4/5] w-full text-chalk-50 lg:order-2"
+        <img
+          src="/bilder/alexander-portrett.webp"
+          alt="Alexander Børe fra Snekkerbore AS"
+          loading="lazy"
+          className="aspect-[4/5] w-full object-cover object-[50%_30%] lg:order-2"
         />
 
         <div className="lg:order-1">

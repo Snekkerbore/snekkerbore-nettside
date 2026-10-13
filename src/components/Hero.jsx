@@ -1,5 +1,10 @@
-import ImageBlock from './ImageBlock'
 import Logo from './Logo'
+
+const HERO_PHOTOS = [
+  { src: '/bilder/kappsag-smil.webp', alt: 'Alexander kapper materialer på kappsagen', position: '50% 35%' },
+  { src: '/bilder/lift-utsikt.webp', alt: 'Montering fra lift med utsikt over fjorden', position: '50% 40%' },
+  { src: '/bilder/sirkelsag-telt.webp', alt: 'Skjæring med sirkelsag under arbeidstelt', position: '50% 55%' },
+]
 
 export default function Hero() {
   return (
@@ -36,11 +41,16 @@ export default function Hero() {
         <Logo className="hidden h-96 lg:block" />
       </div>
 
-      <div className="mx-auto mt-16 max-w-6xl px-6">
-        <ImageBlock
-          variant="steel"
-          className="aspect-[16/9] w-full text-safety-500"
-        />
+      <div className="mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-3 px-6 sm:grid-cols-3 sm:gap-4">
+        {HERO_PHOTOS.map((photo, i) => (
+          <img
+            key={photo.src}
+            src={photo.src}
+            alt={photo.alt}
+            className={`aspect-[3/4] w-full object-cover ${i === 2 ? 'hidden sm:block' : ''}`}
+            style={{ objectPosition: photo.position }}
+          />
+        ))}
       </div>
     </section>
   )
