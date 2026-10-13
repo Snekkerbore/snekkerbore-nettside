@@ -8,9 +8,10 @@ const PROJECTS = [
     variant: 'flat',
   },
   {
-    tag: 'Tilbygg',
-    title: 'Tilbygg med stue og vinterhage',
-    description: 'Tegnet, søkt og bygget fra grunnen – ferdig på fem måneder.',
+    tag: 'Vinduer og dører',
+    title: 'Vindu- og dørjobber',
+    description: 'Utskifting og montering av vinduer og dører – tett, rett og ferdig listet.',
+    image: '/bilder/vindu-ramme.webp',
     variant: 'steel',
   },
   {
