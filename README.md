@@ -38,6 +38,8 @@ slett komponentene, bare la datafilen stå tom til dere har innhold.
 
 ## Deploy
 
+> **Før lansering:** fjern `X-Robots-Tag = "noindex"`-blokken i `netlify.toml`, ellers vises ikke siden i Google.
+
 Satt opp for Netlify (`netlify.toml`): `npm run build` → `dist/`. Følg samme
 fremgangsmåte som for SASO-siden — ny GitHub-repo, koblet til en ny
 Netlify-konto/side.

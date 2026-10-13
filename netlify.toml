@@ -6,3 +6,10 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# MIDLERTIDIG: hold siden ute av Google til innholdet er ferdig.
+# Fjern denne blokken når snekkerbore.no lanseres.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
