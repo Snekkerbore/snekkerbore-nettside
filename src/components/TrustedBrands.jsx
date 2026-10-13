@@ -1,0 +1,26 @@
+import { trustedBrands } from '../data/trustedBrands'
+
+export default function TrustedBrands() {
+  if (trustedBrands.length === 0) return null
+
+  return (
+    <section className="bg-steel-50 py-14 sm:py-16">
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="text-center text-xs font-bold tracking-[0.2em] text-ink-500 uppercase">
+          Verktøy og leverandører vi bruker
+        </p>
+
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-6">
+          {trustedBrands.map((brand) => (
+            <img
+              key={brand.name}
+              src={brand.src}
+              alt={brand.name}
+              className="h-8 w-auto object-contain sm:h-10"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

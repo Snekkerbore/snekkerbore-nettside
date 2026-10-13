@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Snekkerbore AS – solid håndverk og ryddige byggeprosjekter, fra tilbygg og bad til kjøkken og terrasser."
+    />
+    <title>Snekkerbore AS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Statiske skjemaer slik at Netlify oppdager dem ved bygg -->
+    <form name="kontakt" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="navn" />
+      <input type="email" name="epost" />
+      <input type="tel" name="telefon" />
+      <select name="jeg-trenger-hjelp-med">
+        <option>Tilbygg</option>
+        <option>Bad</option>
+        <option>Kjøkken</option>
+        <option>Terrasse</option>
+        <option>Annet</option>
+      </select>
+      <textarea name="melding"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
+    <form name="naeringshenvendelse" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firma" />
+      <input type="text" name="kontaktperson" />
+      <input type="email" name="epost" />
+      <textarea name="melding"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+  </body>
+</html>
