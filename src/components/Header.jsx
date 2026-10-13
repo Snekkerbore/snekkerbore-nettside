@@ -29,9 +29,9 @@ export default function Header() {
           : 'border-transparent bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2">
         <Link to="/" aria-label="Snekkerbore AS, til forsiden">
-          <Logo />
+          <Logo className="h-16" />
         </Link>
 
         <nav className="hidden gap-7 lg:flex">

@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-line bg-steel-50 py-14">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 sm:flex-row sm:items-end sm:justify-between">
-        <Logo />
+        <Logo className="h-24 self-start" />
 
         <nav className="flex gap-6">
           {SOCIAL_LINKS.map((link) => (
