@@ -5,6 +5,7 @@ const PROJECTS = [
     tag: 'Bad',
     title: 'Totalrenovert bad',
     description: 'Fra 1980-talls våtrom til moderne bad med gulvvarme og nedsenket dusj.',
+    image: '/bilder/bad-toalettrom.webp',
     variant: 'flat',
   },
   {
