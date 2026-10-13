@@ -42,24 +42,24 @@ export default function Partners() {
   }
 
   return (
-    <section id="naering" className="bg-steel-50 py-24 sm:py-32">
+    <section id="naering" className="bg-coal-900 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <p className="text-sm font-bold tracking-[0.2em] text-ink-700 uppercase">
+            <p className="text-sm font-bold tracking-[0.2em] text-chalk-300 uppercase">
               Næringskunder
             </p>
-            <h2 className="mt-4 text-3xl font-black text-ink-950 uppercase sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-black text-chalk-50 uppercase sm:text-4xl">
               Samarbeid med oss
             </h2>
-            <p className="mt-6 text-lg text-ink-700">
+            <p className="mt-6 text-lg text-chalk-300">
               Er du byggefirma, eiendomsutvikler eller trenger en pålitelig
               underentreprenør? Ta kontakt.
             </p>
 
             <ul className="mt-8 space-y-3">
               {POINTS.map((point) => (
-                <li key={point} className="flex gap-3 text-ink-700">
+                <li key={point} className="flex gap-3 text-chalk-300">
                   <span className="mt-2 h-2 w-2 shrink-0 bg-safety-500" />
                   {point}
                 </li>
@@ -67,11 +67,11 @@ export default function Partners() {
             </ul>
           </div>
 
-          <div className="bg-steel-100 p-8">
+          <div className="bg-coal-800 p-8">
             {status === 'success' ? (
               <div className="flex h-full flex-col items-center justify-center py-12 text-center">
-                <h3 className="text-xl font-bold text-ink-950">Takk for henvendelsen!</h3>
-                <p className="mt-3 text-ink-700">Vi tar kontakt så snart vi har sett på forespørselen.</p>
+                <h3 className="text-xl font-bold text-chalk-50">Takk for henvendelsen!</h3>
+                <p className="mt-3 text-chalk-300">Vi tar kontakt så snart vi har sett på forespørselen.</p>
               </div>
             ) : (
               <form
@@ -89,10 +89,10 @@ export default function Partners() {
                   </label>
                 </p>
 
-                <h3 className="text-lg font-bold text-ink-950">Send en forespørsel</h3>
+                <h3 className="text-lg font-bold text-chalk-50">Send en forespørsel</h3>
 
                 <div>
-                  <label htmlFor="firma" className="block text-sm font-semibold text-ink-950">
+                  <label htmlFor="firma" className="block text-sm font-semibold text-chalk-50">
                     Firma
                   </label>
                   <input
@@ -102,12 +102,12 @@ export default function Partners() {
                     required
                     value={form.firma}
                     onChange={handleChange}
-                    className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                    className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="kontaktperson" className="block text-sm font-semibold text-ink-950">
+                  <label htmlFor="kontaktperson" className="block text-sm font-semibold text-chalk-50">
                     Kontaktperson
                   </label>
                   <input
@@ -117,12 +117,12 @@ export default function Partners() {
                     required
                     value={form.kontaktperson}
                     onChange={handleChange}
-                    className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                    className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="partner-epost" className="block text-sm font-semibold text-ink-950">
+                  <label htmlFor="partner-epost" className="block text-sm font-semibold text-chalk-50">
                     E-post
                   </label>
                   <input
@@ -132,12 +132,12 @@ export default function Partners() {
                     required
                     value={form.epost}
                     onChange={handleChange}
-                    className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                    className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="partner-melding" className="block text-sm font-semibold text-ink-950">
+                  <label htmlFor="partner-melding" className="block text-sm font-semibold text-chalk-50">
                     Om prosjektet
                   </label>
                   <textarea
@@ -147,20 +147,20 @@ export default function Partners() {
                     required
                     value={form.melding}
                     onChange={handleChange}
-                    className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                    className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full bg-ink-950 px-6 py-3.5 text-sm font-bold text-safety-500 uppercase transition-colors hover:bg-ink-700 disabled:opacity-60"
+                  className="w-full bg-safety-500 px-6 py-3.5 text-sm font-bold text-coal-950 uppercase transition-colors hover:bg-safety-400 disabled:opacity-60"
                 >
                   {status === 'sending' ? 'Sender...' : 'Send forespørsel'}
                 </button>
 
                 {status === 'error' && (
-                  <p className="text-sm text-red-600">Noe gikk galt. Prøv igjen, eller send oss en e-post direkte.</p>
+                  <p className="text-sm text-red-400">Noe gikk galt. Prøv igjen, eller send oss en e-post direkte.</p>
                 )}
               </form>
             )}

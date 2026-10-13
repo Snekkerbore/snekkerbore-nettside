@@ -23,17 +23,17 @@ const PROJECTS = [
 
 export default function Portfolio() {
   return (
-    <section id="prosjekter" className="bg-steel-50 py-24 sm:py-32">
+    <section id="prosjekter" className="bg-coal-900 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-bold tracking-[0.2em] text-ink-700 uppercase">
+            <p className="text-sm font-bold tracking-[0.2em] text-chalk-300 uppercase">
               Prosjekter
             </p>
-            <h2 className="mt-4 text-3xl font-black text-ink-950 uppercase sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-black text-chalk-50 uppercase sm:text-4xl">
               Noe av det vi har bygget
             </h2>
-            <p className="mt-4 text-lg text-ink-700">
+            <p className="mt-4 text-lg text-chalk-300">
               Et lite utvalg av prosjekter vi har gjennomført – hvert ett
               dokumentert fra start til slutt.
             </p>
@@ -55,11 +55,11 @@ export default function Portfolio() {
                   className="aspect-[4/5] w-full text-safety-500"
                 />
               )}
-              <span className="mt-5 inline-block text-xs font-bold tracking-[0.2em] text-ink-700 uppercase">
+              <span className="mt-5 inline-block text-xs font-bold tracking-[0.2em] text-chalk-300 uppercase">
                 {project.tag}
               </span>
-              <h3 className="mt-2 text-xl font-bold text-ink-950">{project.title}</h3>
-              <p className="mt-2 text-ink-700">{project.description}</p>
+              <h3 className="mt-2 text-xl font-bold text-chalk-50">{project.title}</h3>
+              <p className="mt-2 text-chalk-300">{project.description}</p>
             </div>
           ))}
         </div>

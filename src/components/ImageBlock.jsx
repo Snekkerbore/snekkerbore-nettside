@@ -1,8 +1,8 @@
 export default function ImageBlock({ className = '', variant = 'steel' }) {
   const variants = {
-    steel: 'from-ink-950/80 via-ink-700 to-ink-950',
+    steel: 'from-coal-950 via-coal-700 to-coal-950',
     safety: 'from-safety-600 via-safety-500 to-safety-400',
-    flat: 'from-steel-200 via-steel-100 to-steel-200',
+    flat: 'from-coal-700 via-coal-800 to-coal-700',
   }
 
   return (

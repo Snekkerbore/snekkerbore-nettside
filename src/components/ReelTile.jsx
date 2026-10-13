@@ -4,7 +4,7 @@ import { loadInstagramEmbedScript } from '../lib/instagramEmbed'
 
 function PlayIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-steel-50">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-white">
       <path d="M8 5v14l11-7z" />
     </svg>
   )
@@ -70,7 +70,7 @@ export default function ReelTile({ reel, variant }) {
 
   if (active) {
     return (
-      <div ref={containerRef} className="relative aspect-[9/16] w-full overflow-hidden bg-steel-50">
+      <div ref={containerRef} className="relative aspect-[9/16] w-full overflow-hidden bg-coal-900">
         <div
           ref={wrapperRef}
           className="origin-top-left transition-opacity duration-300"
@@ -103,8 +103,8 @@ export default function ReelTile({ reel, variant }) {
       ) : (
         <ImageBlock variant={variant} className="h-full w-full text-safety-500" />
       )}
-      <span className="absolute inset-0 flex items-center justify-center bg-ink-950/0 transition-colors group-hover:bg-ink-950/20">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ink-950/70">
+      <span className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors group-hover:bg-black/20">
+        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-black/70">
           <PlayIcon />
         </span>
       </span>

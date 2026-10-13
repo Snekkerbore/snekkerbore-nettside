@@ -42,49 +42,49 @@ export default function Contact() {
   }
 
   return (
-    <section id="kontakt" className="bg-steel-50 py-24 sm:py-32">
+    <section id="kontakt" className="bg-coal-900 py-24 sm:py-32">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-2">
         <div>
-          <p className="text-sm font-bold tracking-[0.2em] text-ink-700 uppercase">
+          <p className="text-sm font-bold tracking-[0.2em] text-chalk-300 uppercase">
             Kontakt
           </p>
-          <h2 className="mt-4 text-3xl font-black text-ink-950 uppercase sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-black text-chalk-50 uppercase sm:text-4xl">
             Få et uforpliktende tilbud
           </h2>
-          <p className="mt-6 max-w-md text-lg text-ink-700">
+          <p className="mt-6 max-w-md text-lg text-chalk-300">
             Fyll ut skjemaet, så tar vi kontakt for en befaring. Vi svarer
             som regel innen én virkedag.
           </p>
 
-          <dl className="mt-10 space-y-4 text-ink-700">
+          <dl className="mt-10 space-y-4 text-chalk-300">
             <div>
-              <dt className="text-sm text-ink-500">E-post</dt>
+              <dt className="text-sm text-chalk-400">E-post</dt>
               <dd>
-                <a href="mailto:post@snekkerbore.no" className="hover:text-ink-950">
+                <a href="mailto:post@snekkerbore.no" className="hover:text-chalk-50">
                   post@snekkerbore.no
                 </a>
               </dd>
             </div>
             <div>
-              <dt className="text-sm text-ink-500">Telefon</dt>
+              <dt className="text-sm text-chalk-400">Telefon</dt>
               <dd>
-                <a href="tel:+4700000000" className="hover:text-ink-950">
+                <a href="tel:+4700000000" className="hover:text-chalk-50">
                   00 00 00 00
                 </a>
               </dd>
             </div>
             <div>
-              <dt className="text-sm text-ink-500">Dekker</dt>
+              <dt className="text-sm text-chalk-400">Dekker</dt>
               <dd>Bergen og omegn</dd>
             </div>
           </dl>
         </div>
 
-        <div className="bg-steel-100 p-8">
+        <div className="bg-coal-800 p-8">
           {status === 'success' ? (
             <div className="flex h-full flex-col items-center justify-center py-12 text-center">
-              <h3 className="text-2xl font-bold text-ink-950">Takk for din henvendelse!</h3>
-              <p className="mt-3 text-ink-700">
+              <h3 className="text-2xl font-bold text-chalk-50">Takk for din henvendelse!</h3>
+              <p className="mt-3 text-chalk-300">
                 Vi har mottatt meldingen din og tar kontakt så snart som mulig.
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function Contact() {
               </p>
 
               <div>
-                <label htmlFor="navn" className="block text-sm font-semibold text-ink-950">
+                <label htmlFor="navn" className="block text-sm font-semibold text-chalk-50">
                   Navn
                 </label>
                 <input
@@ -115,13 +115,13 @@ export default function Contact() {
                   required
                   value={form.navn}
                   onChange={handleChange}
-                  className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                  className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                 />
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="epost" className="block text-sm font-semibold text-ink-950">
+                  <label htmlFor="epost" className="block text-sm font-semibold text-chalk-50">
                     E-post
                   </label>
                   <input
@@ -131,11 +131,11 @@ export default function Contact() {
                     required
                     value={form.epost}
                     onChange={handleChange}
-                    className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                    className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label htmlFor="telefon" className="block text-sm font-semibold text-ink-950">
+                  <label htmlFor="telefon" className="block text-sm font-semibold text-chalk-50">
                     Telefon
                   </label>
                   <input
@@ -144,13 +144,13 @@ export default function Contact() {
                     type="tel"
                     value={form.telefon}
                     onChange={handleChange}
-                    className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                    className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="jeg-trenger-hjelp-med" className="block text-sm font-semibold text-ink-950">
+                <label htmlFor="jeg-trenger-hjelp-med" className="block text-sm font-semibold text-chalk-50">
                   Jeg trenger hjelp med
                 </label>
                 <select
@@ -158,7 +158,7 @@ export default function Contact() {
                   name="jeg-trenger-hjelp-med"
                   value={form['jeg-trenger-hjelp-med']}
                   onChange={handleChange}
-                  className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                  className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                 >
                   <option>Tilbygg</option>
                   <option>Bad</option>
@@ -169,7 +169,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="melding" className="block text-sm font-semibold text-ink-950">
+                <label htmlFor="melding" className="block text-sm font-semibold text-chalk-50">
                   Melding
                 </label>
                 <textarea
@@ -179,20 +179,20 @@ export default function Contact() {
                   required
                   value={form.melding}
                   onChange={handleChange}
-                  className="mt-1.5 w-full border border-ink-950/15 bg-steel-50 px-4 py-2.5 text-ink-950 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
+                  className="mt-1.5 w-full border border-white/15 bg-coal-900 px-4 py-2.5 text-chalk-50 focus:border-safety-500 focus:ring-1 focus:ring-safety-500 focus:outline-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full bg-ink-950 px-6 py-3.5 text-sm font-bold text-safety-500 uppercase transition-colors hover:bg-ink-700 disabled:opacity-60"
+                className="w-full bg-safety-500 px-6 py-3.5 text-sm font-bold text-coal-950 uppercase transition-colors hover:bg-safety-400 disabled:opacity-60"
               >
                 {status === 'sending' ? 'Sender...' : 'Send henvendelse'}
               </button>
 
               {status === 'error' && (
-                <p className="text-sm text-red-600">Noe gikk galt. Prøv igjen, eller ta kontakt på e-post.</p>
+                <p className="text-sm text-red-400">Noe gikk galt. Prøv igjen, eller ta kontakt på e-post.</p>
               )}
             </form>
           )}

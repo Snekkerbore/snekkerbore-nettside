@@ -4,30 +4,35 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
 
-  --color-steel-50: #f7f7f8;
-  --color-steel-100: #eeeeef;
-  --color-steel-200: #dedee1;
+  /* Bakgrunner: antrasitt, ikke helt svart. 900 er sidens grunnfarge,
+     800/700 brukes til lysere bolker, kort og skjemafelt. */
+  --color-coal-950: #1d2124;
+  --color-coal-900: #2a2f33;
+  --color-coal-800: #343a3f;
+  --color-coal-700: #434a50;
 
-  --color-ink-950: #19191c;
-  --color-ink-700: #45454b;
-  --color-ink-500: #75757d;
+  /* Tekst på mørk bakgrunn */
+  --color-chalk-50: #f3f2ee;
+  --color-chalk-300: #c5c8cb;
+  --color-chalk-400: #9da3a8;
 
   --color-safety-400: #fdcb5c;
   --color-safety-500: #fcbb32;
   --color-safety-600: #e0a01a;
 
-  --color-line: #dcdce0;
+  --color-line: #4a5157;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: var(--color-steel-50);
-    color: var(--color-ink-950);
+    background-color: var(--color-coal-900);
+    color: var(--color-chalk-50);
   }
 
   h1,

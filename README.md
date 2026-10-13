@@ -2,8 +2,9 @@
 
 Nettside bygget med Vite, React 19, React Router 7 og Tailwind v4 (CSS-first
 `@theme`-tokens i `src/index.css`). Samme arkitektur som SASO Eiendom-siden,
-men med en egen visuell stil (gul/sort, inspirert av Snickers Workwear og
-DEWALT) tilpasset en snekkerbedrift.
+men med en egen visuell stil: mørkt antrasitt-design med gul aksentfarge
+fra logoen. Fargene ligger i `src/index.css` (`coal-*` = bakgrunner,
+`chalk-*` = tekst, `safety-*` = gul).
 
 ## Komme i gang
 
@@ -18,7 +19,7 @@ Innhold som naturlig vokser over tid (pressesaker, podcastopptredener,
 Instagram-lenker, betrodde merkevarer/leverandører) ligger i egne filer under
 `src/data/` — oppdater disse i stedet for å røre komponentkoden:
 
-- `src/data/trustedBrands.js` – verktøy-/leverandørlogoer
+- `src/data/trustedBrands.js` – samarbeidspartnere (logoer i `public/logos/`, vises i hvitt som standard)
 - `src/data/presse.js` – presseomtale
 - `src/data/podcasts.js` – podcast-/videoopptredener
 - `src/data/socialReels.js` – Instagram Reels

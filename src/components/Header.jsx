@@ -25,7 +25,7 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 ${
         scrolled
-          ? 'border-line bg-steel-50/90 backdrop-blur'
+          ? 'border-line bg-coal-900/90 backdrop-blur'
           : 'border-transparent bg-transparent'
       }`}
     >
@@ -39,7 +39,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold text-ink-700 transition-colors hover:text-ink-950"
+              className="text-sm font-semibold text-chalk-300 transition-colors hover:text-chalk-50"
             >
               {link.label}
             </a>
@@ -48,7 +48,7 @@ export default function Header() {
 
         <a
           href="/#kontakt"
-          className="hidden bg-ink-950 px-5 py-2.5 text-sm font-bold text-safety-500 uppercase transition-colors hover:bg-ink-700 lg:inline-block"
+          className="hidden bg-safety-500 px-5 py-2.5 text-sm font-bold text-coal-950 uppercase transition-colors hover:bg-safety-400 lg:inline-block"
         >
           Få tilbud
         </a>
@@ -58,7 +58,7 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Åpne meny"
           aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center text-ink-950 lg:hidden"
+          className="flex h-10 w-10 items-center justify-center text-chalk-50 lg:hidden"
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             {open ? (
@@ -71,13 +71,13 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-line bg-steel-50 px-6 pb-6 lg:hidden">
+        <nav className="flex flex-col gap-1 border-t border-line bg-coal-900 px-6 pb-6 lg:hidden">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="rounded px-3 py-3 text-base font-semibold text-ink-950 hover:bg-steel-100"
+              className="rounded px-3 py-3 text-base font-semibold text-chalk-50 hover:bg-coal-800"
             >
               {link.label}
             </a>
@@ -85,7 +85,7 @@ export default function Header() {
           <a
             href="/#kontakt"
             onClick={() => setOpen(false)}
-            className="mt-2 bg-ink-950 px-4 py-3 text-center text-sm font-bold text-safety-500 uppercase"
+            className="mt-2 bg-safety-500 px-4 py-3 text-center text-sm font-bold text-coal-950 uppercase"
           >
             Få tilbud
           </a>

@@ -12,7 +12,7 @@ const YOUTUBE_VIDEOS = [
 
 function PlayIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-steel-50">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-white">
       <path d="M8 5v14l11-7z" />
     </svg>
   )
@@ -20,16 +20,16 @@ function PlayIcon() {
 
 export default function Social() {
   return (
-    <section id="folg-oss" className="bg-steel-100 py-24 sm:py-32">
+    <section id="folg-oss" className="bg-coal-800 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-sm font-bold tracking-[0.2em] text-ink-700 uppercase">
+          <p className="text-sm font-bold tracking-[0.2em] text-chalk-300 uppercase">
             Følg oss
           </p>
-          <h2 className="mt-4 text-3xl font-black text-ink-950 uppercase sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-black text-chalk-50 uppercase sm:text-4xl">
             Vi viser frem jobben vi gjør
           </h2>
-          <p className="mt-6 text-lg text-ink-700">
+          <p className="mt-6 text-lg text-chalk-300">
             Prosjektoppdateringer, før/etter og det som skjer på byggeplassen
             – bli med videre på Instagram og YouTube.
           </p>
@@ -37,12 +37,12 @@ export default function Social() {
 
         <div className="mt-14">
           <div className="mb-5 flex items-center justify-between">
-            <h3 className="text-lg font-bold text-ink-950">Instagram</h3>
+            <h3 className="text-lg font-bold text-chalk-50">Instagram</h3>
             <a
               href="https://instagram.com/snekkerbore"
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-bold text-ink-950 hover:text-ink-700"
+              className="text-sm font-bold text-chalk-50 hover:text-chalk-300"
             >
               Følg @snekkerbore
             </a>
@@ -60,12 +60,12 @@ export default function Social() {
 
         <div className="mt-16">
           <div className="mb-5 flex items-center justify-between">
-            <h3 className="text-lg font-bold text-ink-950">YouTube</h3>
+            <h3 className="text-lg font-bold text-chalk-50">YouTube</h3>
             <a
               href="https://youtube.com/@snekkerbore"
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-bold text-ink-950 hover:text-ink-700"
+              className="text-sm font-bold text-chalk-50 hover:text-chalk-300"
             >
               Abonner på kanalen
             </a>
@@ -76,12 +76,12 @@ export default function Social() {
                 <div className="relative">
                   <ImageBlock variant={video.variant} className="aspect-video w-full text-safety-500" />
                   <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-ink-950/70">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70">
                       <PlayIcon />
                     </span>
                   </span>
                 </div>
-                <p className="mt-3 text-sm font-semibold text-ink-950">{video.title}</p>
+                <p className="mt-3 text-sm font-semibold text-chalk-50">{video.title}</p>
               </div>
             ))}
           </div>
